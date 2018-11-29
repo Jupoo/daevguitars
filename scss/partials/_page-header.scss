@@ -1,0 +1,328 @@
+.page-header {
+	position: relative;
+    @include rem(height, 110px);
+
+    &__wrap {
+        background: #fff;
+        @include shadow-header();
+    }
+
+    & .fixed {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 700;
+    }
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		@include rem(height, 110px);
+	}
+
+	&__logo {
+		@include rem(width, 110px);
+		@include rem(min-width, 110px);
+		flex-grow: 0;
+
+		& img {
+			@include rem(width, 70px);
+		}
+	}
+
+	&__nav {
+		flex-grow: 1;
+	}
+
+	&__list {
+
+	}
+
+	&__item {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(padding-right, 5%);
+
+		&:last-child {
+			padding: 0;
+		}
+
+		& a {
+			display: block;
+			@include rem(font-size, 18px);
+			@include rem(line-height, 22px);
+			color: $color-base;
+
+			&:hover {
+				color: $color-red;
+			}
+		}
+	}
+
+	&__phone {
+		flex-grow: 0;
+	}
+
+	&__phone-icon {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(font-size, 40px);
+		@include rem(line-height, 40px);
+		color: $color-red;
+	}
+
+	&__phone-wrap {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(margin-left, 10px);
+	}
+
+	&__phone-info {
+		@include rem(font-size, 12px);
+		@include rem(line-height, 14px);
+		@include rem(padding-bottom, 5px);
+		font-family: $font-reg;
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	&__phone-num {
+		display: block;
+		@include rem(font-size, 26px);
+		@include rem(line-height, 26px);
+		font-weight: bold;
+		color: $color-red;
+	}
+
+    &__menu-btn {
+        @include rem(font-size, 26px);
+        @include rem(margin-right, 10px);
+    }
+
+    &__adaptive-menu {
+        display: none;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        background: url("#{$img-path}00000050.png") repeat 0px 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 99999;
+        @include rem(padding-right, 40px);
+        overflow-y: scroll;
+    }
+
+    &__adaptive-menu-inner {
+        width: 100%;
+        min-height: 100%;
+        background: darken($color-brown, 10%);
+        position: relative;
+        z-index: 1;
+        text-align: left;
+    }
+
+    &__adaptive-menu-close {
+        @include rem(width, 40px);
+        @include rem(height, 40px);
+        cursor: pointer;
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        z-index: 2;
+        color: #fff;
+        @include rem(font-size, 20px);
+        @include rem(line-height, 40px);
+        text-align: center;
+        background: darken($color-red, 3%);
+        border-bottom: solid 1px darken($color-red, 6%);
+        transition: all $transition-speed ease;
+
+        &:hover {
+            color: $color-brown;
+        }
+    }
+
+    &__adaptive-menu-block {
+
+    }
+
+    &__adaptive-menu-header {
+        border-bottom: solid 1px darken($color-brown, 13%);
+        @include rem(padding, 15px 20px);
+        color: #fff;
+        text-transform: uppercase;
+        font-family: $font-reg;
+        background: darken($color-brown, 12%);
+        @include rem(font-size, 16px);
+        @include rem(line-height, 20px);
+    }
+
+    &__adaptive-menu-icon {
+        @include rem(font-size, 20px);
+        @include rem(margin-right, 10px);
+        @include rem(width, 20px);
+        text-align: center;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    &__adaptive-menu-list {
+        //@include rem(padding, 10px 0px);
+    }
+
+    &__adaptive-menu-item {
+        border-bottom: solid 1px darken($color-brown, 13%);
+
+        & a {
+            display: block;
+            color: #fff;
+            font-family: $font-light;
+            @include rem(font-size, 14px);
+            @include rem(line-height, 20px);
+            text-transform: uppercase;
+            @include rem(padding, 10px 20px);
+            @include rem(padding-left, 50px);
+            transition: all $transition-speed ease;
+
+            &:hover {
+                color: lighten($color-red,10%);
+            }
+        }
+    }
+
+    &__adaptive-menu-link {
+        display: block;
+        border-bottom: solid 1px darken($color-red, 6%);
+        @include rem(padding, 10px 20px);
+        color: #fff;
+        text-transform: uppercase;
+        background: darken($color-red, 0%);
+        @include rem(font-size, 16px);
+        @include rem(line-height, 20px);
+        @include rem(height, 40px);
+
+        &:hover {
+            color: darken($color-brown, 10%);
+        }
+    }
+
+    &__adaptive-menu-socials {
+        @include rem(padding, 10px 20px);
+    }
+
+    &__adaptive-menu-email {
+        display: block;
+        @include rem(padding, 10px 20px);
+        padding-top: 0px;
+        color: #fff;
+        @include rem(font-size, 18px);
+        font-family: $font-light;
+
+        &:hover {
+            color: darken($color-brown, 10%);
+        }
+    }
+
+    &__adaptive-menu-contacts {
+        background: darken($color-red, 0%);
+    }
+
+    &--notice-active {
+        position: relative;
+        @include rem(padding-right, 20px);
+    }
+
+    &__notice-count {
+        position: absolute;
+        top: -5px;
+        left: 14px;
+        background: $color-red;
+        border-radius: 50%;
+        @include rem(font-size, 10px);
+        @include rem(line-height, 20px);
+        @include rem(min-width, 20px);
+        @include rem(padding, 0px 3px);
+        transition: background $transition-speed ease;
+        text-align: center;
+    }
+
+    &--notice-active:hover &__notice-count {
+        background: #fff;
+    }
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.page-header {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.page-header {
+        @include rem(height, 80px);
+
+		&__inner {
+			@include rem(height, 80px);
+		}
+
+		&__logo {
+			@include rem(width, 80px);
+			@include rem(min-width, 80px);
+			flex-grow: 0;
+
+			& img {
+				@include rem(width, 60px);
+			}
+		}
+
+		&__item {
+			@include rem(padding-right, 2%);
+
+			& a {
+				@include rem(font-size, 16px);
+			}
+		}
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.page-header {
+		&__nav {
+			display: none;
+		}
+
+		&__logo {
+			flex-grow: 1;
+		}
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.page-header {
+		&__phone-icon {
+			@include rem(font-size, 30px);
+			@include rem(line-height, 36px);
+		}
+
+		&__phone-wrap {
+			@include rem(margin-left, 5px);
+		}
+
+		&__phone-info {
+			& span {
+				display: none;
+			}
+		}
+
+		&__phone-num {
+			@include rem(font-size, 17px);
+			@include rem(line-height, 17px);
+		}
+	}
+}

@@ -1,0 +1,161 @@
+.review {
+	overflow: hidden;
+	
+	&__slider {
+		@include rem(margin, 0px -15px);
+	}
+
+	&__item {
+		border: solid 2px $color-beige-light;
+		border-bottom: solid 4px $color-blue;
+		@include rem(padding, 20px);
+		@include rem(padding-bottom, 30px);
+		@include rem(margin, 0px 15px);
+		@include rem(margin-bottom, 56px);
+	}
+
+	&__item-top {
+		display: flex;
+		align-items: center;
+	}
+
+	&__item-img {
+		flex-grow: 0;
+		@include rem(width, 70px);
+		@include rem(height, 70px);
+		overflow: hidden;
+
+		& img {
+			width: 100%;
+		}
+	}
+
+	&__item-name {
+		flex-grow: 1;
+		@include rem(padding-left, 25px);
+		font-weight: bold;
+		@include rem(font-size, 16px);
+		@include rem(line-height, 20px);
+	}
+
+	&__item-vk {
+		display: block;
+		flex-grow: 0;
+		@include rem(font-size, 40px);
+		@include rem(line-height, 40px);
+		color: $color-blue;
+
+		&:hover {
+			color: darken($color-blue,5%);
+		}
+	}
+
+	&__item-text {
+		@include rem(font-size, 15px);
+		@include rem(line-height, 22px);
+		@include rem(margin-top, 12px);
+		@include rem(height, 176px);
+		overflow: auto;
+		font-style: italic;
+	}
+
+	&__links {
+		text-align: center;
+		@include rem(margin-top, 80px);
+	}
+
+	&__title {
+		@include rem(font-size, 17px);
+		@include rem(line-height, 21px);
+		text-transform: uppercase;
+	}
+
+	&__soc {
+		@include rem(margin-top, 30px);
+	}
+
+	&__soc-btn {
+		display: inline-block;
+		vertical-align: top;
+		text-align: center;
+		@include rem(height, 40px);
+		@include rem(line-height, 40px);
+		@include rem(margin, 0px 7px);
+		color: #fff;
+		border-radius: 20px;
+		transition: all $transition-speed ease;
+
+		&:hover {
+			color: #fff;
+		}
+	}
+
+	&--soc-vk {
+		@include rem(width, 180px);
+		@include rem(font-size, 12px);
+		background: $color-blue;
+
+		&:hover {
+			background: #759dca;
+		}
+	}
+
+	&--soc-fb {
+		@include rem(width, 140px);
+		@include rem(font-size, 18px);
+		background: $color-blue-dark;
+
+		&:hover {
+			background: #7786b5;
+		}
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.review {
+		
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.review {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.review {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.review {
+		&__item-top {
+			flex-direction: column;
+		}
+
+		&__item-name {
+			padding-left: 0;
+			@include rem(margin, 10px 0px);
+		}
+
+		&__item-text {
+			text-align: center;
+		}
+
+		&__title {
+			@include rem(font-size, 15px);
+		}
+
+		&__soc-btn {
+			width: 100%;
+			@include rem(margin, 5px 0px);
+		}
+	}
+}

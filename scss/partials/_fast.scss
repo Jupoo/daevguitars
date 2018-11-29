@@ -1,0 +1,214 @@
+.fast {
+	background: $color-red url("#{$img-path}bg_guitar.jpg") no-repeat center top;
+	height: 320px;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+
+	&__title {
+		@include rem(font-size, 37px);
+		@include rem(line-height, 39px);
+		text-transform: uppercase;
+		font-family: $font-russoone;
+
+		& span {
+			background: #fff;
+			color: $color-base;
+			@include rem(padding, 0px 8px);
+		}
+	}
+
+	&__phone-block {
+		@include rem(margin-top, 40px);
+	}
+
+	&__phone-title {
+		@include rem(font-size, 35px);
+		@include rem(line-height, 40px);
+		text-transform: uppercase;
+		font-family: $font-russoone;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	&__phone {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(margin-left, 12px);
+		text-align: left;
+	}
+
+	&__phone-num {
+		display: block;
+		font-family: $font-reg;
+		@include rem(font-size, 26px);
+		@include rem(line-height, 40px);
+		font-weight: bold;
+		color: #fff;
+
+		& span {
+			@include rem(font-size, 40px);
+			@include rem(line-height, 40px);
+			display: inline-block;
+			vertical-align: top;
+			@include rem(margin-left, 4px);
+		}
+
+		&:hover {
+			color: $color-base;
+		}
+	}
+
+	&__time {
+		text-align: left;
+		@include rem(font-size, 18px);
+		@include rem(line-height, 20px);
+		color: $color-base;
+		@include rem(margin-top, 4px);
+	}
+
+	&__soc {
+		text-align: left;
+		@include rem(font-size, 35px);
+		@include rem(line-height, 40px);
+		text-transform: uppercase;
+		font-family: $font-russoone;
+		@include rem(margin-top, 25px);
+	}
+
+	&__soc-text {
+		display: inline-block;
+		vertical-align: middle;
+		@include rem(margin-right, 10px);
+	}
+
+	&__soc-icon {
+		display: inline-block;
+		@include rem(margin, 0px 4px);
+
+		& .svg_black {
+			transition: all $transition-speed ease;
+		}
+
+		&:hover .svg_black {
+			fill: $color-yellow;
+		}
+	}
+
+	&--soc-vk {
+		@include rem(width, 72px);
+		vertical-align: middle;
+	}
+
+	&--soc-fb {
+		@include rem(width, 53px);
+		vertical-align: top;
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.fast {
+		&__title {
+			@include rem(max-width, 870px);
+			margin: 0 auto;
+		}
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.fast {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.fast {
+		&__phone-block {
+			@include rem(margin-top, 20px);
+		}
+
+		&__soc {
+			@include rem(margin-top, 15px);
+		}
+
+		&__title {
+			@include rem(font-size, 30px);
+			@include rem(line-height, 34px);
+		}
+
+		&__phone-title {
+			@include rem(font-size, 33px);
+		}
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.fast {
+		&__title {
+			@include rem(font-size, 28px);
+			@include rem(line-height, 32px);
+
+			& span {
+				display: block;
+			}
+		}
+
+		&__phone-block {
+			@include rem(margin-top, 15px);
+		}
+
+		&__phone {
+			margin-left: 0;
+			text-align: center;
+			display: block;
+		}
+
+		&__time {
+			text-align: center;
+			margin: 0;
+		}
+
+		&__phone-num {
+			@include rem(font-size, 24px);
+
+			& span {
+				@include rem(font-size, 34px);
+			}
+		}
+
+		&__phone-title {
+			@include rem(font-size, 24px);
+			@include rem(line-height, 28px);
+		}
+
+		&__soc {
+			@include rem(font-size, 24px);
+			text-align: center;
+			@include rem(margin-top, 10px);
+		}
+
+		&__soc-text {
+			display: block;
+			margin-right: 0;
+		}
+
+		&--soc-vk {
+			@include rem(width, 60px);
+			@include rem(height, 52px);
+			vertical-align: middle;
+		}
+
+		&--soc-fb {
+			@include rem(width, 44px);
+			@include rem(height, 52px);
+			vertical-align: top;
+		}
+	}
+}

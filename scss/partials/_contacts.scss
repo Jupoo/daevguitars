@@ -1,0 +1,109 @@
+.contacts {
+	background: #fff url("#{$img-path}bg_contacts.jpg") no-repeat center top;
+
+	&__items {
+
+	}
+
+	&__item {
+		@include clearfix();
+		@include rem(margin-bottom, 60px);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__icon {
+		float: left;
+
+		& .icon--call {
+			@include rem(font-size, 43px);
+		}
+
+		& .icon--time {
+			@include rem(font-size, 38px);
+		}
+
+		& .icon--location_fill {
+			@include rem(font-size, 48px);
+		}
+	}
+
+	&__info {
+		overflow: hidden;
+		@include rem(padding-left, 20px);
+	}
+
+	&__title {
+		@include rem(font-size, 20px);
+		@include rem(line-height, 20px);
+		@include rem(margin-bottom, 10px);
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	&__text {
+		@include rem(font-size, 16px);
+		@include rem(line-height, 25px);
+		display: block;
+		color: $color-base;
+	}
+
+	&__map {
+
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.contacts {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.contacts {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.contacts {
+		&__items {
+			display: flex;
+		}
+
+		&__item {
+			flex-grow: 1;
+			text-align: center;
+			@include rem(margin-bottom, 40px);
+
+			&:last-child {
+				@include rem(margin-bottom, 40px);
+			}
+		}
+
+		&__icon {
+			float: none;
+			@include rem(height, 70px);
+			@include rem(line-height, 48px);
+		}
+
+		&__info {
+			padding: 0;
+		}
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.contacts {
+		&__items {
+			flex-direction: column;
+		}
+	}
+}

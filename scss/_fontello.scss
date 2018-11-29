@@ -1,0 +1,62 @@
+[class^="icon--"], [class*=" icon--"] {
+  text-align: center;
+}
+
+[class^="icon--"]:before, [class*=" icon--"]:before {
+  font-family: $font-icons;
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  //width: 100%;
+  //margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  //line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  //margin-left: .2em;
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+
+.icon--location:before { content: '\e800'; } /* '' */
+.icon--location_fill:before { content: '\e801'; } /* '' */
+.icon--call:before { content: '\e802'; } /* '' */
+.icon--time:before { content: '\e803'; } /* '' */
+.icon--fb:before { content: '\e804'; } /* '' */
+.icon--vk:before { content: '\e805'; } /* '' */
+.icon--youtube:before { content: '\e806'; } /* '' */
+.icon--logo-creator:before { content: '\e807'; } /* '' */
+.icon--benefit-1:before { content: '\e808'; } /* '' */
+.icon--benefit-2:before { content: '\e809'; } /* '' */
+.icon--benefit-3:before { content: '\e80a'; } /* '' */
+.icon--arrow-left:before { content: '\e80b'; } /* '' */
+.icon--arrow-right:before { content: '\e80c'; } /* '' */
+.icon--logo-daev:before { content: '\e80d'; } /* '' */
+.icon--share:before { content: '\e80e'; } /* '' */
+.icon--vkontakte-btn:before { content: '\e80f'; } /* '' */
+.icon--cancel:before { content: '\e810'; } /* '' */
+.icon--fb_btn:before { content: '\e811'; } /* '' */
+.icon--facebook-btn:before { content: '\e812'; } /* '' */
+.icon--vk_btn:before { content: '\e813'; } /* '' */
+.icon--menu:before { content: '\f0c9'; } /* '' */

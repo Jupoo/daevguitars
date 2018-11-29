@@ -1,0 +1,165 @@
+.main {
+	background: #fff url("#{$img-path}repair_of_guitars.jpg") no-repeat center top;
+	background-size: cover;
+	position: relative;
+	height: 768px;
+	color: #fff;
+
+	&__bottom {
+		display: none;
+	}
+
+	&__top {
+		position: absolute;
+		left: 0;
+		@include rem(top, 40px);
+		width: 100%;
+	}
+
+	&__location {
+		@include rem(padding-top, 10px);
+	}
+
+	&__location-icon {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(font-size, 38px);
+		@include rem(line-height, 46px);
+		color: #fff;
+	}
+
+	&__location-address {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(font-size, 16px);
+		@include rem(line-height, 23px);
+		@include rem(margin-left, 15px);
+		text-align: left;
+	}
+
+	&__phone {
+		display: inline-block;
+		vertical-align: top;
+		text-align: left;
+		@include rem(padding-top, 8px);
+	}
+
+	&__phone-icon {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(font-size, 49px);
+		@include rem(line-height, 50px);
+		color: $color-yellow;
+	}
+
+	&__phone-wrap {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(margin-left, 10px);
+	}
+
+	&__phone-num {
+		display: block;
+		@include rem(font-size, 22px);
+		@include rem(line-height, 26px);
+		font-weight: bold;
+		color: $color-yellow;
+		
+		&:hover {
+			color: darken($color-yellow,20%);
+		}
+	}
+
+	&__phone-info {
+		@include rem(font-size, 15px);
+		@include rem(line-height, 15px);
+		@include rem(padding-top, 8px);
+		font-family: $font-light;
+		text-align: center;
+	}
+
+	&__logo {
+		@include rem(font-size, 100px);
+	}
+
+	&__heading {
+		@include rem(font-size, 60px);
+		@include rem(line-height, 65px);
+		font-family: $font-russoone;
+		text-align: center;
+		text-transform: uppercase;
+		@include rem(padding-top, 75px);
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.main {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.main {
+		height: 570px;
+
+		&__bottom {
+			display: block;
+			position: absolute;
+			left: 0;
+			@include rem(bottom, 10px);
+			width: 100%;
+			text-align: center;
+			opacity: 0.8;
+		}
+
+		&__top {
+			@include rem(top, 30px);
+		}
+
+		&__heading {
+			@include rem(font-size, 50px);
+			@include rem(line-height, 55px);
+			@include rem(padding-top, 40px);
+		}
+
+		&__logo {
+			text-align: left;
+		}
+
+		&__phone {
+			@include rem(padding-top, 25px);
+		}
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.main {
+		background-position: 60% top;
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.main {
+		height: 400px;
+		background-position: 65% top;
+
+		&__heading {
+			@include rem(font-size, 34px);
+			@include rem(line-height, 39px);
+			@include rem(padding-top, 35px);
+		}
+
+		&__logo {
+			@include rem(font-size, 60px);
+		}
+
+		&__phone {
+			@include rem(padding-top, 5px);
+		}
+	}
+}

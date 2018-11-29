@@ -1,0 +1,65 @@
+.btn {
+	display: inline-block;
+	vertical-align: top;
+	color: $color-base;
+	border: solid 1px $color-brown-light;
+	font-family: $font-reg;
+	@include rem(height, 40px);
+	@include rem(font-size, 15px);
+	@include rem(line-height, 38px);
+	@include rem(padding, 0px 30px);
+	background-color: #fff;
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	border-radius: 20px;
+	white-space: nowrap;
+	max-width: 100%;
+	transition: all $transition-speed ease;
+  
+	&:hover {
+		background: $color-brown-light;
+		text-decoration: none;
+		color: #fff;
+	}
+
+	&--fill {
+		width: 100%;
+		padding: 0px;
+	}
+}
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.btn {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.btn {
+		
+	}
+}
+
+//------------------- < 992 > 768 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) and (min-width: ($width-content-md)) {
+	.btn {
+		
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.btn {
+		
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.btn {
+		
+	}
+}

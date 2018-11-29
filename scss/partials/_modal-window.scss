@@ -1,0 +1,218 @@
+.modal-shadow {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	display: none;
+	margin: auto;
+	width: 100%;
+	height: 100%;
+	background: url("#{$img-path}00000050.png") repeat 0px 0px;
+	z-index: 800;
+	opacity: 0;
+	cursor: pointer;
+
+	&.js-active {
+		display: block;
+	}
+}
+
+.modal-window {
+	position: fixed;
+	top: 50%;
+	left: 0px;
+	right: 0px;
+	margin: auto;
+	width: 100%;
+	max-height: 100%;
+	//width: 600px;
+	//height: auto;
+	//max-width: 100%;
+	//max-height: 100%;
+	z-index: 999;
+	background: none;
+	opacity: 0;
+	//overflow: hidden;
+	overflow: auto;
+	@include rem(padding, 10px);
+	cursor: pointer;
+
+	&__body {
+		width: 800px;
+		max-width: 100%;
+		//height: 100%;
+		margin: 0 auto;
+		background: #fff;
+		@include rem(padding, 50px 40px);
+		border-radius: 0;
+		@include shadow-path();
+		position: relative;
+		cursor: default;
+	}
+
+	&.js-window-absolut {
+		position: absolute;
+	}
+	&.js-window {
+		display: none;
+		left: -99999px;
+	}
+	&.js-active {
+		display: block;
+		left: 0px;
+	}
+
+	&__title {
+		color: $color-base;
+		font-family: $font-reg;
+		font-weight: bold;
+		@include rem(font-size, 24px);
+		@include rem(line-height, 30px);
+		@include rem(padding-bottom, 45px);
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	&__product {
+		@include clearfix();
+	}
+
+	&__product-img {
+		float: left;
+		@include rem(width, 300px);
+
+		& img {
+			width: 100%;
+		}
+	}
+
+	&__product-prices {
+		overflow: hidden;
+		@include rem(padding-left, 40px);
+	}
+
+	&__product-price {
+		@include rem(font-size, 16px);
+		@include rem(line-height, 22px);
+		@include rem(margin, 15px 0px);
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		& span {
+			color: $color-brown-light;
+			font-weight: bold;
+			white-space: nowrap;
+		}
+	}
+
+	&__text {
+		@include rem(font-size, 15px);
+		@include rem(line-height, 27px);
+
+		& b, & strong {
+			font-weight: bold;
+		}
+
+		& p {
+			@include rem(margin, 15px 0px);
+
+			&:first-child {
+				margin-top: 0;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.closemodal {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	text-decoration: none;
+	display: block;
+	z-index: 1;
+	transition: color $transition-speed ease;
+	text-align: center;
+	@include rem(width, 30px);
+	@include rem(height, 30px);
+	@include rem(font-size, 18px);
+	@include rem(line-height, 30px);
+	color: $color-base;
+
+	&:hover {
+		color: $color-red;
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.modal-window {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.modal-window {
+		@include rem(font-size, 22px);
+		@include rem(line-height, 28px);
+		@include rem(padding-bottom, 40px);
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.modal-window {
+		&__title {
+			@include rem(font-size, 20px);
+			@include rem(line-height, 26px);
+			@include rem(padding-bottom, 35px);
+		}
+
+		&__product {
+			text-align: center;
+		}
+
+		&__product-img {
+			display: inline-block;
+			vertical-align: top;
+			float: none;
+			max-width: 100%;
+		}
+
+		&__product-prices {
+			@include rem(padding-left, 0px);
+			@include rem(padding-top, 20px);
+		}
+
+		&__product-price {
+
+		}
+
+		&__body {
+			@include rem(padding, 30px 20px);
+		}
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.modal-window {
+		&__title {
+			@include rem(font-size, 16px);
+			@include rem(line-height, 22px);
+			@include rem(padding-bottom, 30px);
+		}
+	}
+}

@@ -1,0 +1,86 @@
+.advantage {
+	@include rem(padding, 75px 0px);
+	background: $color-beige-extralight;
+
+	&__item {
+		text-align: center;
+		@include rem(padding-top, 15px);
+	}
+
+	&__icon {
+		@include rem(font-size, 78px);
+		color: $color-brown;
+	}
+
+	&__text {
+		@include rem(font-size, 17px);
+		@include rem(line-height, 25px);
+		@include rem(margin-top, 50px);
+	}
+
+	&__i {
+		position: relative;
+
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: -6px;
+			width: 80px;
+			height: 80px;
+			background: $color-yellow-light;
+			border-radius: 50%;
+			z-index: 1;
+		}
+
+		&:before {
+			position: relative;
+			z-index: 2;
+		}
+	}
+
+	.icon--benefit-1, .icon--benefit-3 {
+		&:after {
+			left: -15px;
+		}
+	}
+
+	.icon--benefit-2 {
+		&:after {
+			right: -15px;
+		}
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.advantage {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.advantage {
+		&__text {
+			@include rem(font-size, 16px);
+		}
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.advantage {
+		&__text {
+			@include rem(margin-top, 20px);
+		}
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.advantage {
+
+	}
+}

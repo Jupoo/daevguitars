@@ -1,0 +1,71 @@
+.socials {
+	display: flex;
+	justify-content: center;
+	@include rem(font-size, 16px);
+
+	&__btn {
+		@include rem(margin, 0px 5px);
+		transition: all $transition-speed ease;
+
+		&:first-child {
+			margin-left: 0px;
+		}
+
+		&:last-child {
+			margin-right: 0px;
+		}
+
+		& a {
+			display: block;
+			font-size: em(40px);
+			//line-height: em(40px);
+			color: $color-base;
+
+			&:hover {
+				color: $color-red;
+			}
+		}
+	}
+
+	&--adaptive &__btn > a {
+		color: #fff;
+
+		&:hover {
+			color: $color-brown;
+		}
+	}
+
+	&--adaptive {
+		justify-content: left;
+		@include rem(font-size, 12px);
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.socials {
+		
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.socials {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.socials {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.socials {
+
+	}
+}

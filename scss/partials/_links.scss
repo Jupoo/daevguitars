@@ -1,0 +1,151 @@
+.links {
+	background: #fff url("#{$img-path}bg_linls.jpg") no-repeat center top;
+	height: 450px;
+	display: flex;
+	align-items: center;
+
+	&__header {
+		@include rem(font-size, 38px);
+		@include rem(line-height, 48px);
+		font-family: $font-russoone;
+		text-transform: uppercase;
+		color: #fff;
+		display: inline-block;
+		vertical-align: top;
+		text-align: left;
+
+		& span {
+			background: $color-red;
+			padding: 0px 8px;
+		}
+	}
+
+	&__btns {
+		@include rem(margin-top, 45px);
+	}
+
+	&__btn {
+		display: inline-block;
+		vertical-align: middle;
+		color: #fff;
+		border: solid 4px $color-red;
+		font-family: $font-reg;
+		font-weight: bold;
+		@include rem(height, 65px);
+		@include rem(font-size, 19px);
+		@include rem(line-height, 57px);
+		@include rem(padding, 0px 35px);
+		background: none;
+		cursor: pointer;
+		text-decoration: none;
+		text-align: center;
+		border-radius: 35px;
+		white-space: nowrap;
+		max-width: 100%;
+		transition: all $transition-speed ease;
+		text-transform: uppercase;
+
+		&:hover {
+			background: $color-red;
+			text-decoration: none;
+			color: #fff;
+		}
+
+		& span {
+			@include rem(font-size, 30px);
+			@include rem(margin-left, 15px);
+			display: inline-block;
+			vertical-align: top;
+		}
+	}
+
+	&__btns-text {
+		display: inline-block;
+		vertical-align: middle;
+		@include rem(margin, 0px 30px);
+		@include rem(font-size, 30px);
+		@include rem(line-height, 40px);
+		text-transform: uppercase;
+		font-family: $font-russoone;
+		color: #fff;
+	}
+
+	&__soc-icon {
+		display: inline-block;
+		@include rem(margin, 0px 4px);
+
+		& .svg_red {
+			transition: all $transition-speed ease;
+		}
+
+		&:hover .svg_red {
+			fill: $color-base;
+		}
+	}
+
+	&--soc-vk {
+		@include rem(width, 67px);
+		vertical-align: top;
+	}
+
+	&--soc-fb {
+		@include rem(width, 49px);
+		vertical-align: top;
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.links {
+		
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.links {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.links {
+		&__btns {
+			text-align: center;
+		}
+
+		&__btns-text {
+			@include rem(margin, 10px);
+		}
+
+		&__header {
+			display: block;
+			text-align: center;
+			@include rem(font-size, 32px);
+			@include rem(line-height, 42px);
+		}
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.links {
+		&__header {
+			@include rem(font-size, 28px);
+			@include rem(line-height, 38px);
+		}
+
+		&__btns-text {
+			@include rem(margin, 15px 30px);
+			display: block;
+		}
+
+		&__btn {
+			width: 100%;
+			@include rem(max-width, 310px);
+			padding: 0;
+		}
+	}
+}
